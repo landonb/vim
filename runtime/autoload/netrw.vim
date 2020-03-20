@@ -4925,7 +4925,7 @@ fun! s:NetrwBrowseChgDir(islocal,newdir,...)
       NetrwKeepj call g:Netrw_funcref()
      elseif type(g:Netrw_funcref) == 3
 "      call Decho("edit-a-file: handling a list of g:Netrw_funcrefs",'~'.expand("<slnum>"))
-      for Fncref in g:Netrw_funcref
+      for FncRef in g:Netrw_funcref
        if type(FncRef) == 2
         NetrwKeepj call FncRef()
        endif
@@ -5237,7 +5237,7 @@ fun! netrw#BrowseX(fname,remote)
     elseif type(g:Netrw_corehandler) == 3
      " g:Netrw_corehandler is a List of function references (see :help Funcref)
 "     call Decho("g:Netrw_corehandler is a List",'~'.expand("<slnum>"))
-     for Fncref in g:Netrw_corehandler
+     for FncRef in g:Netrw_corehandler
       if type(FncRef) == 2
        call FncRef(a:fname)
       endif
